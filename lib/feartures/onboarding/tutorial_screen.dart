@@ -99,14 +99,14 @@ class _TutorialScreenState extends State<TutorialScreen> {
           ),
           bottomNavigationBar: BottomAppBar(
               child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
                 vertical: Sizes.size24, horizontal: Sizes.size24),
             child: AnimatedOpacity(
               duration: Duration(milliseconds: 300),
               opacity: _showinPage == Page.first ? 0 : 1,
               child: CupertinoButton(
                 onPressed: () {},
-                child: Text("Enter the app!"),
+                child: const Text("Enter the app!"),
                 color: Theme.of(context).primaryColor,
               ),
             ),
