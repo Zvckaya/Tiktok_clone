@@ -2,22 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/feartures/authentication/login_form_screen.dart';
 
 import 'package:tiktok_clone/feartures/authentication/sign_up_screen.dart';
 import 'package:tiktok_clone/feartures/authentication/widgets/auth_button.dart';
-import 'package:tiktok_clone/feartures/username_screen.dart';
+import 'package:tiktok_clone/feartures/authentication/username_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   void _onSignUpTap(BuildContext context) {
-    Navigator.of(context)
-        .pop(MaterialPageRoute(builder: (context) => SignUpScreen()));
+    Navigator.of(context).pop();
   }
 
   void _onEmailTap(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (context) => UsernameScreen(),
+    ));
+  }
+
+  void _onEmailLoginTap(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => LoginFormScreen(),
     ));
   }
 
@@ -42,7 +48,7 @@ class LoginScreen extends StatelessWidget {
           ),
           Gaps.v40,
           AuthButton(
-            onTap: _onEmailTap,
+            onTap: _onEmailLoginTap,
             icon: FaIcon(FontAwesomeIcons.user),
             text: "Use phone & emial",
           ),

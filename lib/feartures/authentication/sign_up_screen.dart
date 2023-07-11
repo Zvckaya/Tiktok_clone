@@ -5,7 +5,7 @@ import 'package:tiktok_clone/constants/sizes.dart';
 
 import 'package:tiktok_clone/feartures/authentication/login_screen.dart';
 import 'package:tiktok_clone/feartures/authentication/widgets/auth_button.dart';
-import 'package:tiktok_clone/feartures/username_screen.dart';
+import 'package:tiktok_clone/feartures/authentication/username_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
